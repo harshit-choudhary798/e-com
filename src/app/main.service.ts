@@ -19,10 +19,17 @@ export class MainService {
    
 
   constructor(private http: HttpClient) {
+    
     const numberStr = localStorage.getItem('number');
     if (numberStr !== null) {
       this.number = parseInt(numberStr);
     }
+
+    const cartStr = localStorage.getItem('cartItems');
+    if (cartStr !== null) {
+      this.cartProducts = JSON.parse(cartStr);
+    }
+    
   }
 
 
@@ -43,7 +50,7 @@ export class MainService {
       next: (data: Product) => {
         this.cartProducts.push(data);
         console.log(this.cartProducts);
-        
+        localStorage.setItem('cartItems', JSON.stringify(this.cartProducts));
       }
 
     });
