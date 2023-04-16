@@ -16,7 +16,7 @@ export class NavbarComponent implements  OnInit{
     console.log("yes its working")
   }
 ngOnInit() {
-  this.number1=this.services1.number
+  
 }
   
 

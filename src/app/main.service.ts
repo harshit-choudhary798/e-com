@@ -13,6 +13,7 @@ interface Product {
   providedIn: 'root'
 })
 export class MainService {
+  
   apiUrl = 'https://fakestoreapi.com/products';
   number = 0;
   cartProducts: Product[] = [];
@@ -39,7 +40,7 @@ export class MainService {
   }
 
   addOne() {
-    ++this.number;
+    this.number=++this.number;
     localStorage.setItem('number', this.number.toString());
      return this.number;
   }
