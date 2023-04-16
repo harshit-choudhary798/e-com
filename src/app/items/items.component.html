@@ -1,0 +1,13 @@
+<div class="card-container">
+<div class="card" *ngFor="let item of items">
+  <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.title }}</h5>
+    <p class="card-text">Price: {{ item.price }} $</p>
+    <p class="card-text">Rating: {{ item.rating.rate }}/5</p>
+    <a  class="btn btn-primary"
+    (click)="submit(item.id)"
+    >Add to cart</a>
+  </div>
+</div>
+</div>
