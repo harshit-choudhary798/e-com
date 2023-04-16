@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../main.service';
-import { response } from 'express';
+import { Observable, of } from 'rxjs';
 interface Product {
   id: number;
   title: string;
@@ -15,19 +15,19 @@ interface Product {
 })
 
 export class CartComponent implements OnInit {
-  cartItems: Product[] = [];
+  cartProducts:any=[]
 
-  constructor(public cartService: MainService) {}
+  constructor(public cartService: MainService) {
+          
+  }
+ 
 
   ngOnInit() {
-    this.cartService.cartItems$.subscribe((items) => {
-      this.cartItems = items;
-    });
-  }
-
-  clearCart() {
-    this.cartService.clearCart();
+   this.cartProducts=this.cartService.cartProducts
+   console.log(this.cartProducts)
+   }
   }
 
 
-}
+
+

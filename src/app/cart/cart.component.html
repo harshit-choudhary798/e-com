@@ -1,3 +1,5 @@
+<div *ngIf="this.cartService.number>0"
+>
 <h1>Shopping Cart</h1>
 <table>
   <thead>
@@ -7,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of cartItems">
+    <tr *ngFor="let product of cartProducts">
       <td>{{ product.id }}</td>
       <td>{{ product.price }}</td>
     </tr>
@@ -21,7 +23,7 @@
   <label><input type="radio" name="payment" value="bank-transfer">Bank Transfer</label>
 </div>
 <button>Checkout</button>
-
+</div>
 
 
 

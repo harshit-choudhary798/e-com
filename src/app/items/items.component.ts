@@ -11,14 +11,16 @@ export class ItemsComponent implements OnInit {
 
   constructor(private services:MainService) { }
   items:any=[]
-
+  
 
   submit(id: number) {
-    this.services.cartId(id).subscribe((product: any) => {
-      // console.log(product)
-      this.services.addOne()
+    this.services.cartId(id)
+    this.services.addOne()
+    //.subscribe((product: any) => {
+    //    console.log(product)
+      
      
-    });
+    // });
   }
   
   ngOnInit(): void {

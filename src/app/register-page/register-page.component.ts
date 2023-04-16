@@ -26,6 +26,8 @@ export class RegisterPageComponent implements OnInit {
   get password(){
     return this.form.get('password')
   }
+
+  
   constructor() { }
 
   ngOnInit(): void {

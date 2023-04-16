@@ -6,16 +6,18 @@ import { MainService } from '../main.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements  OnInit{
 
   constructor(public services1:MainService) { }
-   
+   number1:any
   submit(){
     localStorage.clear();
     this.services1.number = 0;
     console.log("yes its working")
   }
-
+ngOnInit() {
+  this.number1=this.services1.number
+}
   
 
 }
