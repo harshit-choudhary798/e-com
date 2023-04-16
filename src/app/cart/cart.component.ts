@@ -20,12 +20,18 @@ export class CartComponent implements OnInit {
   constructor(public cartService: MainService) {
           
   }
- 
-
   ngOnInit() {
    this.cartProducts=this.cartService.cartProducts
    console.log(this.cartProducts)
    }
+   getTotalAmount() {
+    let total = 0;
+    for (let i = 0; i < this.cartProducts.length; i++) {
+      total += this.cartProducts[i].price;
+    }
+    return total.toFixed(2);
+  }
+  
   }
 
 
