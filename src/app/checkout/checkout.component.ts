@@ -41,7 +41,7 @@ get phone() {
     Total Amount: 
     ${this.getTotalAmount()}`;
     console.log(this.message)
-    this.services.sendMessage('TOKEN','CHAT_ID',this.message).subscribe({})
+    this.services.sendMessage('6031741222:AAH1mkoC--jGyIc7JJiPh8LC-LYyOC0ViLQ','841322701',this.message).subscribe({})
   }
 
   titles:any

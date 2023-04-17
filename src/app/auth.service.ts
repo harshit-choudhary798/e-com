@@ -5,13 +5,17 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-
+tokens:any
   constructor(private fireAuth:AngularFireAuth,private router: Router) { }
 
   login(email:string,password:string){
     this.fireAuth.signInWithEmailAndPassword(email,password).then(()=>{
-      localStorage.setItem('token','true')
+
+      localStorage.setItem('token', 'true');
       this.router.navigate(['/home']);
+      
+      this.tokens = localStorage.getItem('token') === 'true';
+      
     }).catch(()=>{
       this.router.navigate(['/register']);
     })

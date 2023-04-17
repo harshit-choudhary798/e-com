@@ -21,10 +21,14 @@
   </tbody>
 </table>
 
-<div class="buttons">
+<div
+*ngIf="token"
+class="buttons">
   <button  routerLink="/home" class="btn btn-secondary">Shop More</button>
   <button  routerLink="checkout" class="btn btn-primary">Continue with Order</button>
 </div>
+<button class="btn btn-primary"mat-raised-button color="primary" routerLink="/login">Login</button>
+
 
 </div>
 

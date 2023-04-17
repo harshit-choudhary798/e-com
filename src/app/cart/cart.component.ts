@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../main.service';
 import { Observable, of } from 'rxjs';
+import { AuthService } from '../auth.service';
 interface Product {
   id: number;
   title: string;
@@ -16,11 +17,14 @@ interface Product {
 
 export class CartComponent implements OnInit {
   cartProducts:any=[]
-
-  constructor(public cartService: MainService) {
-          
+token:any
+  constructor(public cartService: MainService,private auth:AuthService) {
+       
   }
+  
   ngOnInit() {
+    this.token=this.auth.tokens
+
    this.cartProducts=this.cartService.cartProducts
    console.log(this.cartProducts)
    }
