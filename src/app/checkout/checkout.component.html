@@ -1,3 +1,30 @@
-<button 
-(click)="submit()"
-class="btn btn-primary">click me</button>
+<form [formGroup]="form">
+    <div style="margin-bottom: 10px;">
+      <label style="display: block; font-weight: bold;">Name:</label>
+      <input formControlName="name" type="text" name="name" style="padding: 5px; border-radius: 5px; border: 1px solid #ccc; width: 100%;" required>
+      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="text-danger">
+        <div *ngIf="name?.errors?.['required']">Name  is required.</div>
+      </div>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label style="display: block; font-weight: bold;">Address:</label>
+      <textarea formControlName="address" name="address" style="padding: 5px; border-radius: 5px; border: 1px solid #ccc; width: 100%;" required></textarea>
+      <div *ngIf="address?.invalid && (address?.dirty || address?.touched)" class="text-danger">
+        <div *ngIf="address?.errors?.['required']">address is required.</div>
+      </div>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label style="display: block; font-weight: bold;">Phone no. Number:</label>
+      <input formControlName="phone" type="tel" name="phone" style="padding: 5px; border-radius: 5px; border: 1px solid #ccc; width: 100%;" required>
+      <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class="text-danger">
+        <div *ngIf="phone?.errors?.['required']">Name is required.</div>
+      </div>
+    </div>
+    <button [disabled]="form.invalid"
+      (click)="submit()"
+      type="submit"
+      style="background-color: #4CAF50; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-top: 10px; border-radius: 5px;">
+      click me
+    </button>
+  </form>
+  

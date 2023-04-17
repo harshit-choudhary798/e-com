@@ -16,30 +16,10 @@
   </table>
   <div>
     <p>Total Amount: ${{ getTotalAmount() }}</p>
-    <h3>Payment Methods:</h3>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="payment" value="paypal" id="paypal">
-      <label class="form-check-label" for="paypal">
-        Paypal
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="payment" value="credit-card" id="credit-card">
-      <label class="form-check-label" for="credit-card">
-        Credit Card
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="payment" value="bank-transfer" id="bank-transfer">
-      <label class="form-check-label" for="bank-transfer">
-        Bank Transfer
-      </label>
-    </div>
   </div>
-
   <button 
   routerLink="checkout"
-  class="btn btn-primary">Checkout</button>
+  class="btn btn-primary">Continue with Order</button>
 </div>
 
 <div *ngIf="cartProducts.length === 0" class="empty-cart py-16">
