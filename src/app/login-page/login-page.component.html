@@ -20,7 +20,9 @@
                   <div *ngIf="password?.errors?.['required']">Password is required.</div>
                 </div>
               </div>
-              <button type="submit" [disabled]="form.invalid" class="btn btn-primary btn-block mt-4">Submit</button>
+              <button 
+              (click)="submit()"
+              type="submit" [disabled]="form.invalid" class="btn btn-primary btn-block mt-4">Submit</button>
             </form>
           </div>
         </div>

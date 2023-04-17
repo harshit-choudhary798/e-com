@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -23,8 +24,14 @@ get password(){
   return this.form.get('password')
 }
 
-  constructor() { }
 
+
+  constructor(private auth:AuthService) { }
+  submit(){
+    if (this.email?.value && this.password?.value) {
+      this.auth.login(this.email!.value, this.password!.value);
+    }
+  }
   ngOnInit(): void {
   }
 
