@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ItemsComponent } from './items/items.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { CartComponent } from './cart/cart.component';
     RegisterPageComponent,
     NavbarComponent,
     ItemsComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

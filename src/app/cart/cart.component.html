@@ -36,7 +36,10 @@
       </label>
     </div>
   </div>
-  <button class="btn btn-primary">Checkout</button>
+
+  <button 
+  routerLink="checkout"
+  class="btn btn-primary">Checkout</button>
 </div>
 
 <div *ngIf="cartProducts.length === 0" class="empty-cart py-16">
