@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../main.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -24,7 +25,7 @@ get phone() {
   return this.form.get('phone');
 }
 
-  constructor(private services:MainService) { }
+  constructor(private services:MainService,private router: Router) { }
   message:any
 
 
@@ -42,6 +43,10 @@ get phone() {
     ${this.getTotalAmount()}`;
     console.log(this.message)
     this.services.sendMessage('6031741222:AAH1mkoC--jGyIc7JJiPh8LC-LYyOC0ViLQ','841322701',this.message).subscribe({})
+
+    this.router.navigate(['/order']);
+
+
   }
 
   titles:any

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../main.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,15 +9,15 @@ import { MainService } from '../main.service';
 })
 export class NavbarComponent implements  OnInit{
 
-  constructor(public services1:MainService) { }
+  constructor(public services1:MainService,private auth:AuthService) { }
    number1:any
+
   submit(){
     localStorage.clear();
     this.services1.number = 0;
     console.log("yes its working")
   }
 ngOnInit() {
-  
 }
   
 

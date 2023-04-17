@@ -13,6 +13,8 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import {AngularFireModule} from '@angular/fire/compat'
 import { environment } from 'src/environments/environment';
+import { IntroComponent } from './intro/intro.component';
+import { OrderingPageComponent } from './ordering-page/ordering-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { environment } from 'src/environments/environment';
     NavbarComponent,
     ItemsComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    IntroComponent,
+    OrderingPageComponent
   ],
   imports: [
     BrowserModule,

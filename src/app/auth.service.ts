@@ -13,9 +13,9 @@ tokens:any
 
       localStorage.setItem('token', 'true');
       this.router.navigate(['/home']);
-      
+
       this.tokens = localStorage.getItem('token') === 'true';
-      
+     
     }).catch(()=>{
       this.router.navigate(['/register']);
     })
