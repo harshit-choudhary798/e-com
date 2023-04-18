@@ -15,6 +15,7 @@ import {AngularFireModule} from '@angular/fire/compat'
 import { environment } from 'src/environments/environment';
 import { IntroComponent } from './intro/intro.component';
 import { OrderingPageComponent } from './ordering-page/ordering-page.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { OrderingPageComponent } from './ordering-page/ordering-page.component';
     CartComponent,
     CheckoutComponent,
     IntroComponent,
-    OrderingPageComponent
+    OrderingPageComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,

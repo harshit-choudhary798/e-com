@@ -9,8 +9,9 @@ import { AuthService } from '../auth.service';
 })
 export class NavbarComponent implements  OnInit{
 
-  constructor(public services1:MainService,private auth:AuthService) { }
+  constructor(public services1:MainService,public auth:AuthService) { }
    number1:any
+    token:any
 
   submit(){
     localStorage.clear();
@@ -18,7 +19,8 @@ export class NavbarComponent implements  OnInit{
     console.log("yes its working")
   }
 ngOnInit() {
+
+  }
 }
   
 
-}

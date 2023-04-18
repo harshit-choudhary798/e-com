@@ -104,5 +104,17 @@
     margin-top: 50px;
   }
 
-
+  .featured-products {
+    text-align: center;
+  }
+  
+  .product-carousel {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product-carousel img {
+    width: 200p;
+    margin: 0 10px;
+  }
 

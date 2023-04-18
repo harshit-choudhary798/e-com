@@ -5,16 +5,23 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-tokens:any
+tokens:any=null
   constructor(private fireAuth:AngularFireAuth,private router: Router) { }
 
   login(email:string,password:string){
-    this.fireAuth.signInWithEmailAndPassword(email,password).then(()=>{
+    this.fireAuth.signInWithEmailAndPassword(email,password).then((response)=>{
 
-      localStorage.setItem('token', 'true');
-      this.router.navigate(['/home']);
+      if(response.user?.emailVerified===true){
+        localStorage.setItem('token', 'true');
+        this.router.navigate(['/home']);
+        this.tokens = localStorage.getItem('token') === 'true';
+      }else{
+        this.router.navigate(['/verify'])
+      }
 
-      this.tokens = localStorage.getItem('token') === 'true';
+    
+      
+      
      
     }).catch(()=>{
       this.router.navigate(['/register']);
@@ -22,11 +29,27 @@ tokens:any
   }
 
   register(email:string,password:string){
-    this.fireAuth.createUserWithEmailAndPassword(email,password).then(()=>{
-      this.router.navigate(['/login']);
+    this.fireAuth.createUserWithEmailAndPassword(email,password).then((response)=>{
+      console.log(response)
+
+      this.SendEmailForVerification(response.user)
+        this.router.navigate(['/login']);
+      
+      
     }).catch(()=>{
       
       this.router.navigate(['/home']);
     })
+  }
+
+  SendEmailForVerification(user:any){
+    user.sendEmailVerification().then(() => {
+      this.router.navigate(['/verify']);
+      if(user.emailVerified){
+        this.router.navigate(['/login']);
+      }
+    }).catch((error:any) => {
+      console.log(error);
+    });
   }
 }
