@@ -42,7 +42,7 @@ get phone() {
     Total Amount: 
     ${this.getTotalAmount()}`;
     console.log(this.message)
-    this.services.sendMessage('6031741222:AAH1mkoC--jGyIc7JJiPh8LC-LYyOC0ViLQ','841322701',this.message).subscribe({})
+    this.services.sendMessage('telegram_api_key','chat_id',this.message).subscribe({})
 
     this.router.navigate(['/order']);
 
