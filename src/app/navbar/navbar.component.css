@@ -1,7 +1,50 @@
 .bg{
-    background-color: aliceblue;
+  
     color: black;
 }
 .d-flex{
     text-align: end;
 }
+#title {
+ 
+    color: rgb(40, 3, 3);
+  }
+  
+  h1 {
+    font-family: 'Montserrat';
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+  
+
+  
+  .navbar-brand {
+    font-family: 'Ubuntu';
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar {
+    color: rgb(0, 1, 1);
+  }
+  
+  .nav-item {
+    padding-left: 18px;
+    padding-right: 18px;
+    color: rgb(41, 101, 81);
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+  }
+
+    .title {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .navbar {
+        background: linear-gradient(to bottom, #333, #fff);
+      }
+      
+  

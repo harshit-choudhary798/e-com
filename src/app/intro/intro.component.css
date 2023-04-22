@@ -1,64 +1,107 @@
+.hero-image {
+  background-image: url(https://plus.unsplash.com/premium_photo-1661765713449-99572ef0f0de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 40%;
+  border-radius: 10px;
+}
 
-  .hero-image {
-    background-image: url('https://images.unsplash.com/photo-1597854571411-7aef9b5a4e5f');
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
+.hero-text {
+  width: 50%;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   
-  .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-  
-  .hero-text h1 {
-    font-size: 60px;
-    margin-bottom: 30px;
-  }
-  
-  .hero-text p {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .btn {
-    background-color: #ff6a00;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 20px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #ffc93c;
-  }
-  
-  .featured-products {
-    padding: 50px;
-  }
-  
-  .featured-products h2 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 50px;
-  }
-  
-  .product-carousel img {
-    width: 200px;
-    margin: 0 10px;
-  }
+  padding: 50px;
+}
+
+/* Featured products styles */
+.new-arrivals {
+  padding: 50px;
+  text-align: center;
+}
+
+.new-arrivals h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.product-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 20px;
+}
+
+.product-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.product-carousel img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 10px;
+  scroll-snap-align: center;
+}
+#features {
+  padding: 7% 15%;
+  background-color: white;
+  position: relative;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+p {
+  color: #8f8f8f
+}
+
+.icon {
+  color: #B3E283;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #4E9F3D;
+}
   
   .customer-reviews {
     background-color: #f8f9fa;
-    padding: 50px;
+    
   }
   
   .customer-reviews h2 {
@@ -118,3 +161,7 @@
     margin: 0 10px;
   }
 
+  body {
+    background-color: #f2f2f2;
+  }
+  

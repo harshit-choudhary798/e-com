@@ -11,18 +11,12 @@ tokens:any=null
   login(email:string,password:string){
     this.fireAuth.signInWithEmailAndPassword(email,password).then((response)=>{
 
-      if(response.user?.emailVerified===true){
         localStorage.setItem('token', 'true');
         this.router.navigate(['/home']);
-        this.tokens = localStorage.getItem('token') === 'true';
-      }else{
-        this.router.navigate(['/verify'])
-      }
-
-    
+       this.tokens = localStorage.getItem('token') === 'true';
       
+        
       
-     
     }).catch(()=>{
       this.router.navigate(['/register']);
     })
@@ -45,9 +39,7 @@ tokens:any=null
   SendEmailForVerification(user:any){
     user.sendEmailVerification().then(() => {
       this.router.navigate(['/verify']);
-      if(user.emailVerified){
-        this.router.navigate(['/login']);
-      }
+
     }).catch((error:any) => {
       console.log(error);
     });
