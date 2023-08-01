@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # ECom
 
 
@@ -24,6 +9,7 @@
 Skills: Angular · HTML · TypeScript · Firebase · Cascading Style Sheets (CSS) · JavaScript
 
 
+![image](https://github.com/harshit-choudhary798/e-com/assets/111317199/3d5c05fb-280f-43f9-b267-8879a7b4efd5)
 
 
 
